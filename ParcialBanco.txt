@@ -1,0 +1,13 @@
+Se desea representar un Banco. el banco tiene su nombre, cantidad de empleados, y la información de sus cuentas (maximo N cuentas). De cada cuenta se conoce su CBU, alias, DNI del titular, moneda y monto. Existen dos tipos de bancos: el tradicional que posee su dirección, localidad y cantidad de cuentas en dolares abiertas y el digital que define si dirección web.
+
+1- Genere las clases necesarias. Provea constructores para iniciar los objetos del modelo a partir de la informacion necesaria. En particular, los bancos deben iniciarse para un manxima de N cuentas, (unicamente sin cuentas); el banco tradicional debe iniciar con cantidad 0 de cuentas en dolares abiertas; una cuenta debe iniciarse con monto en 0.
+
+2- Implemente los metodos necesarios, en las clases que corresponda, para: 
+	a) AgregarCuenta: Agrega una cuenta al banco. Considerar que un banco tradicional puede tener un maximo de 100 cuentas abiertas en dolares. El metodo debe retornar true si pudo agregarse y false en caso contrario.
+	b) ObtenerCuenta: dado un CBU, obtener la cuenta con dicho CBU.
+	c)depositarDinero: dado un CBU y un monto, incrementar el monto de la cuenta en dicha cantidad.
+	d) puedeRecibirTarjeta: recibe un CBU y retorna si es posible asociarle una tarjeta de debito a la cuenta. Este metodo retorna verdadero en las siguentes situaciones:
+	- Si el banco es digital, la cuenta debe ser en pesos y su saldo superior a $100.000
+	- Si el banco es tradicional ¿, la cuenta debe ser en dolares o pesos. Si es en dolares, con saldo superior a u$s 500. Si es en pesos con saldo superior a $70.000
+
+3- Realice un programa que instacie un banco tradicional y otro digital. Agregue cuentas bancarias y realice las operaciones de los puntos 2.c y 2.d
